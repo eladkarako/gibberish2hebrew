@@ -1,0 +1,91 @@
+@charset   "UTF-8";
+@namespace "http://www.w3.org/1999/xhtml";
+/* ╔════════════════════════════════════════════════════════════════════╗
+   ║ at_document_end : CSS                                              ║
+   ╟────────────────────────────────────────────────────────────────────╢
+   ╚════════════════════════════════════════════════════════════════════╝
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*zero + defaults + left-to-right (LTR) bi-directional*/
+*{box-sizing:         border-box;
+  text-size-adjust:         100%;
+  touch-action:     manipulation;
+  margin:                      0;
+  padding:                     0;
+  direction:                 rtl;
+  text-align:              right;
+  vertical-align:       baseline;
+  resize:                   none;
+  user-zoom:                none;
+  -webkit-user-drag:        none;
+     -moz-user-drag:        none;
+          user-drag:        none;
+}
+
+/*scroll fix*/
+[textinput],[textoutput]{
+  z-index: 0;
+  scroll-behavior:            smooth;
+  -webkit-overflow-scrolling: touch;
+     -moz-overflow-scrolling: touch;
+          overflow-scrolling: touch;
+}
+/*
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*core-size*/
+html,body{                     width:100%; height:100%; overflow:hidden;                        }
+[textinput],[textoutput]{      width:50%;  height:100%; overflow-x:hidden; overflow-y:scroll;   }
+
+/*core-placements*/
+html,body{     display:block; position:absolute;  top:0;    bottom:100%;  left:100%;  right:0%;  }
+[textinput]{   display:block; position:absolute;  top:0;    bottom:100%;  left:50%;   right:0%;  }
+[textoutput]{  display:block; position:absolute;  top:0;    bottom:100%;  left:100%;  right:50%; }
+/*
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*core-borders*/
+ html,     html:focus,     html:hover,     html:active
+,body,     body:focus,     body:hover,     body:active
+,[textinput],  [textinput]:focus,  [textinput]:hover,  [textinput]:active
+,[textoutput], [textoutput]:focus, [textoutput]:hover, [textoutput]:active 
+{
+  outline:                   0pt none transparent;
+  border:                     1px solid gray;
+  border-collapse:                   collapse;
+  border-spacing:                           0;
+}
+/*
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*font*/
+html,[textinput],[textoutput]{
+  font:           18pt 'Courier New', monospace;
+  line-height:    1.4em;
+  letter-spacing: .3pt;
+}
+
+html{
+  white-space:    pre;
+}
+[textinput],[textoutput]{
+  white-space:    normal;
+}
+
+*{
+  font-kerning:none;
+  font-feature-settings:'kern' 0;
+}
+/*
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*color*/
+[textinput],[textoutput]{
+  color:             black;
+  background-image:  none;
+}
+[textinput]{
+  background-color:  #FFFFE0;
+}
+[textoutput]{
+  background:  none #F2F2F2;
+}
+
+[textinput],[textoutput]{
+  padding:8pt;
+}
